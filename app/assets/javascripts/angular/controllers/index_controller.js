@@ -1,11 +1,9 @@
 Box.controller('IndexController', ['$scope',
   function($scope) {
+    this.showNav = false;
 
-    $scope.title1 = 'Button';
-    $scope.title4 = 'Warn';
-    $scope.isDisabled = true;
-
-    $scope.googleUrl = 'http://google.com';  }
-
-
+    $scope.toggle = function() {
+      this.showNav= !this.showNav;
+    }
+  }
 ]);

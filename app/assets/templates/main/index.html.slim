@@ -6,18 +6,21 @@
           a.brand.md-button.md-ink-ripple md-button="" href="/"
             = image_tag "box-bot.png", :class => "box-bot"
             = image_tag "box-logo.png", :class => "box-logo"
-      ul
+      button.toggle-btn.menu-btn ng-click="toggle()" md-button=""
+        span Site Menu
+        span.icon.icon-arrow-drop-down
+      ul.main-nav ng-class="showNav ? 'is-visible' : '' "
         li
-          a.nav-button.md-button.md-ink-ripple.md-hue-2 href="/" md-button=""
+          a.nav-button.md-button.md-ink-ripple.main-btn href="/" md-button=""
             span Home
         li
-          a.nav-button.md-button.md-ink-ripple md-button="" href="/"
+          a.nav-button.md-button.md-ink-ripple.main-btn md-button="" href="/"
             span About
         li
-          a.nav-button.md-button.md-ink-ripple md-button="" href="/"
+          a.nav-button.md-button.md-ink-ripple.main-btn md-button="" href="/"
             span Executive Board
         li
-          a.nav-button.md-button.md-ink-ripple md-button="" href="/"
+          a.nav-button.md-button.md-ink-ripple.main-btn md-button="" href="/"
             span BOx Merchandise
 section.background
   h1.headline
@@ -25,3 +28,13 @@ section.background
     p eXplore. eXperience. eXcel
   .circle
     = image_tag "box-bot-happy.png", :class => "box-bot-happy"
+.home-rows
+  .home-row.layout-xs-column.layout-row layout="row" layout-xs="column"
+    .body-row
+      h1 Mission
+      p
+        | Explore, experience and excel in this circle of life!
+        |  The Ateneo Biological Organization – eXplore. eXperience. eXcel., or simply BOx,
+        |  invites Biology majors, Life Sciences majors and non majors alike, towards appreciation of life.
+    .body-row
+      h1 Vision

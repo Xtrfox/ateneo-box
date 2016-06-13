@@ -22,9 +22,8 @@
 
 .navbar {
   background-color: #f6f6f6 !important;
-  @include box-shadow(0px 0px 1px 1px rgba(0, 0, 0, 0.14),
-  0px 0px 2px 2px rgba(0, 0, 0, 0.098),
-   0px 0px 5px 1px rgba(0, 0, 0, 0.084));
+
+  @include box-shadow(0 2px 5px 0 rgba(0,0,0,0.4));
 }
 
 .box-bot {
@@ -42,6 +41,10 @@
   text-align: center;
   font-weight: 300;
   color: white;
+
+  p {
+    font-size: 27px;
+  }
 }
 
 #nav {
@@ -56,15 +59,27 @@
     font-weight: 300;
     height: 100%;
   }
+
+  .menu-btn {
+    display: none;
+      // padding: 0 32px 0 8px;
+      // font-size: 14px;
+  }
   li {
     color: #75419A;
   }
   h1 {
-    height: inherit;
+    height: 100%;
     a {
       height: inherit
     }
   }
+  .md-toolbar-tools {
+    height: 64px !important;
+    max-height: 64px !important;
+
+  }
+
 }
 
 ul {
@@ -88,6 +103,7 @@ ul {
   @include box-shadow(0px 0px 1px 1px rgba(0, 0, 0, 0.14),
   0px 0px 2px 2px rgba(0, 0, 0, 0.098),
    0px 0px 5px 1px rgba(0, 0, 0, 0.084));
+  position: relative;
 }
 .box-bot-happy {
   width: 300px;
@@ -97,11 +113,86 @@ ul {
 h1 {
   font-size: 32px;
 }
-p {
-  font-size: 27px;
-}
+
 
 .home-row {
-  width: 920px;
+  max-width: 920px;
   margin: 0 auto 60px auto;
+}
+.home-rows {
+  background-color: #F7F7F7;
+
+}
+.body-row {
+  max-width: 50%;
+
+  p {
+    line-height: 35px;
+  }
+}
+
+.body-row {
+  margin-top: 10vw;
+}
+
+
+@media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 800px), screen and (max-width: 960px)
+  {
+  #nav {
+  .main-nav {
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      float: none;
+      position: absolute;
+      top: 64px;
+      right: 0;
+      left: 0;
+      z-index: 6;
+      background: #8B56B3;
+      display: none;
+      padding: 0;
+
+      li {
+        color: white;
+        display: block;
+        float: none;
+
+      }
+
+  }
+  .main-btn {
+    display: block;
+        float: none;
+        line-height: 48px;
+        text-align: left;
+        font-size: 14px;
+        padding: 0 40px;  }
+  .is-visible {
+    display: block !important;
+  }
+  .menu-btn {
+    display: block;
+    color: #75419A;
+    margin: 0 20px 0 0;
+  }
+}
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon {
+  left: auto;
+    right: 8px;
+    opacity: .56;
 }
