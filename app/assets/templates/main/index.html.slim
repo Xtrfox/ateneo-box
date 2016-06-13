@@ -1,11 +1,27 @@
-div ng-cloak=""
-  md-content.md-padding
-    md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label=("navigation links")
-      md-nav-item md-nav-click="goto('page1')" name="page1"  Page One
-      md-nav-item md-nav-click="goto('page2')" name="page2"  Page Two
-      md-nav-item md-nav-click="goto('page3')" name="page3"  Page Three
-      /!
-        | these require actual routing with ui-router or ng-route, so they won't work in the demo
-        | <md-nav-item md-nav-sref="app.page4" name="page4">Page Four</md-nav-item
-        | <md-nav-item md-nav-href="#page5" name="page5">Page Five</md-nav-item
-    span  {currentNavItem}
+.layout-column.flex#nav layout="column" flex=""
+  md-toolbar.navbar
+    .fill-height.layout-row.flex layout="row"
+      .md-toolbar-tools
+        h1
+          a.brand.md-button.md-ink-ripple md-button="" href="/"
+            = image_tag "box-bot.png", :class => "box-bot"
+            = image_tag "box-logo.png", :class => "box-logo"
+      ul
+        li
+          a.nav-button.md-button.md-ink-ripple.md-hue-2 href="/" md-button=""
+            span Home
+        li
+          a.nav-button.md-button.md-ink-ripple md-button="" href="/"
+            span About
+        li
+          a.nav-button.md-button.md-ink-ripple md-button="" href="/"
+            span Executive Board
+        li
+          a.nav-button.md-button.md-ink-ripple md-button="" href="/"
+            span BOx Merchandise
+section.background
+  h1.headline
+    | Ateneo Biological Organization
+    p eXplore. eXperience. eXcel
+  .circle
+    = image_tag "box-bot-happy.png", :class => "box-bot-happy"

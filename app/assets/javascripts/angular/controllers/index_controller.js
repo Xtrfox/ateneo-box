@@ -1,8 +1,11 @@
 Box.controller('IndexController', ['$scope',
   function($scope) {
 
-    $scope.currentNavItem = 'page1';
-  }
+    $scope.title1 = 'Button';
+    $scope.title4 = 'Warn';
+    $scope.isDisabled = true;
+
+    $scope.googleUrl = 'http://google.com';  }
 
 
 ]);
