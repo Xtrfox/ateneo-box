@@ -29,6 +29,7 @@ gem 'spring',        group: :development
 gem 'pg'
 gem 'jquery-ui-rails'
 gem 'angularjs-rails'
+gem 'rails-angular-material'
 gem 'compass-rails'
 gem 'susy'
 gem 'slim'
